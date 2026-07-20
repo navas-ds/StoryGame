@@ -26,6 +26,7 @@ Operational Directives:
 4. If checking times or relative statements, invoke 'datetime_tool'.
 5. Answer questions completely and factually. Ground all claims using source documents when available."""
     ),
+    MessagesPlaceholder(variable_name="chat_history"),
     ("human", "{input}"),
     MessagesPlaceholder(variable_name="agent_scratchpad")
 ])
