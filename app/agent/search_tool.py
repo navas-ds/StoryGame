@@ -1,5 +1,5 @@
 # Fixed: Importing the optimized functional RAG retriever pipeline step
-from app.rag.retriever import retrieve_documents
+from rag.retriever import retrieve_documents
 
 def search_documents(query: str):
     """Executes search matches against the vector storage database."""
