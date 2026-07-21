@@ -1,7 +1,7 @@
 import torch
 from langchain_huggingface import HuggingFaceEmbeddings
 
-EMBEDDING_MODEL="all-MiniLM-L6-v2"
+EMBEDDING_MODEL="sentence-transformers/all-MiniLM-L6-v2"
 def get_embedding_model():
     """
     Handles local hardware orchestration natively. 
