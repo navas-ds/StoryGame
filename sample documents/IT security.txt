@@ -1,0 +1,100 @@
+Part­I 
+Information Technology Security Policy of IAAD
+
+Information Technology Security Policy 
+
+1.	Preamble 
+
+The Indian Audit and Accounts Department acknowledges an obligation to ensure appropriate security for all Information Technology data, equipment, and processes in its domain of ownership and control. The purpose of this Security Policy is to create an environment that ensures security of equipments, maintain system security and availability, data integrity, and individual privacy by preventing unauthorized access to information and information systems and by preventing misuse of, damage to, or loss of data. 
+This Policy will: 
+
+1.	Enumerate the elements that constitute IT security. 
+2.	Explain the need for IT security. 
+3.	Specify the various categories of IT data, equipment, and processes subject to this policy. 
+4.	Indicate, in broad terms, the IT security responsibilities of the various roles in which each member of the Department may function. 
+5.	Indicate appropriate levels of security through instructions in the form of policies and guidelines. 
+
+2.	Reasons for IT Security 
+
+The objective of information security is “the protection of the interests of those relying on information, and the information systems and communications that deliver the information, from harm resulting from failures of availability, confidentiality, and integrity”. 
+Availability means the characteristic of data, information and information systems being accessible and useable on a timely basis in the required manner. 
+Confidentiality means the characteristic of data and information being disclosed only to authorized persons, entities, and processes at authorized times and in an authorized manner. 
+Integrity means the characteristic of data and information being accurate and complete and the preservation of accuracy and completeness by protecting the data and information from unauthorized, unanticipated, or unintentional modification. 
+Confidentiality of information may be mandated by common law, formal statute, explicit agreement, or convention. Different classes of information warrant different degrees of confidentiality. 
+The hardware and software components that constitute the Department’s IT Assets represent a sizable monetary investment that must be protected. The same is true for the information stored in its IT systems, some of which have taken huge resources to generate, and some of which can never be reproduced.
+The assets that must be protected include: 
+
+•	Computer and Peripheral Equipment. 
+•	Communications Equipment. 
+•	Computing and Communications Premises. 
+•	Supplies and Data Storage Media. 
+•	System Computer Programs and Documentation. 
+•	Application Computer Programs and Documentation. 
+•	Information. 
+
+The use of IT assets in a manner other than for the purpose for which they were intended represents a misallocation of valuable resources, and possibly a danger to the Department’s reputation or a violation of the law. 
+Efficient and Appropriate Use ensures that the Departmental IT resources are used for the purposes for which they were intended, in a manner that does not interfere with the rights of others. 
+Finally, proper functioning of IT systems is required for the efficient operation of the Department. Some systems, such as the Voucher Level Computerization Application, and the General Provident Fund Application are of paramount importance to the functioning of the Department. 
+
+3.	Security Philosophy 
+
+While the basic security principles are to protect the confidentiality, integrity, and availability of the information and information resources within the Indian Audit and Accounts Department, the security endeavour would be governed by the following Core Principles: 
+
+1.	Awareness: 
+Employees should be aware of the need for security of information systems and networks and what they can do to enhance security. Employees should understand that security failures may significantly harm systems and networks under their control. They should also be aware of the potential harm to others arising from interconnectivity and interdependency. 
+2.	Responsibility: 
+All Employees are responsible for the security of information systems and networks. They should be accountable in a manner appropriate to their individual roles. Organisations should review their own policies, practices, measures, and procedures regularly and assess whether these are appropriate to their environment. Those who develop, design and supply products and services should address system and network security and distribute appropriate information including updates in a timely manner so that users are better able to understand the security functionality of products and services and their responsibilities related to security. 
+3.	Response:
+ Employees should act in a timely and co operative manner to prevent, detect and respond to security incidents. Recognising the interconnectivity of information systems and networks and the potential for rapid and widespread damage, Employees should act in a timely and co­operative manner to address security incidents. They should share information about threats and vulnerabilities, as appropriate, and implement procedures for rapid and effective co­ operation to prevent, detect and respond to security incidents. 
+4.	Ethics:
+ Employees should respect the legitimate interests of others. Given the pervasiveness of information systems and networks, Employees need to recognise that their action or inaction may harm others, and therefore, strive to develop and adopt best practices and to promote conduct that recognises security needs and respects the legitimate interests of others. 
+5.	Democracy:
+ The security of information systems and networks should be compatible with essential values of a democratic society. Security should be implemented in a manner consistent with the values recognised by democratic societies including the freedom to exchange thoughts and ideas, the free flow of information, the confidentiality of information and communication, the appropriate protection of personal information, openness and transparency. 
+6.	Risk assessment:
+ Risk assessments should be conducted at regular intervals. Risk assessment identifies threats and vulnerabilities and should be sufficiently broad based to encompass key internal and external factors, such as technology, physical and human factors, policies and third party services with security implications. Risk assessment will allow determination of the acceptable level of risk and assist the selection of appropriate controls to manage the risk of potential harm to information systems and networks in light of the nature and importance of the information to be protected. Because of the growing interconnectivity of information systems, risk assessment should include consideration of the potential harm that may originate from others or be caused to others. 
+7.	Security design and implementation: 
+Employees should incorporate security as an essential element of information systems and networks. Systems, networks and policies need to be properly designed, implemented and co­ordinated to optimise security. A major, but not exclusive, focus of this effort is the design and adoption of appropriate safeguards and solutions to avoid or limit potential harm to data and equipments from identified threats and vulnerabilities. Both technical and non technical safeguards and solutions are required and should be proportionate to the value of the information on the organisation’s systems and networks. Security should be a fundamental element of all products, services, systems and networks, and an integral part of system design and architecture. For end users, security design and implementation consists largely of selecting and configuring products and services for their system. 
+8.	Security management:
+ Organisation should adopt a comprehensive approach to security management. Security management should be based on risk assessment and should be dynamic, encompassing all levels of Organisation’s activities and all aspects of their operations. It should include forward looking responses to emerging threats and address prevention, detection and response to incidents, systems recovery, ongoing maintenance, review and audit. Information system and network security policies, practices, measures and procedures should be co­ordinated and integrated to create a coherent system of security. 
+9.	Reassessment: 
+Organisation should review and reassess the security of information systems and networks, and make appropriate modifications to security policies, practices, measures and procedures. New and changing threats and vulnerabilities are continuously discovered. Organisation should continually review, reassess and modify all aspects of security to deal with these evolving risks.
+ 
+4. Policy Statement:
+ 
+It is the Policy of the organization to ensure that: 
+1.	Assets will be classified as to the level of protection required; 
+2.	Information will be protected against unauthorized access; 
+3.	Confidentiality of information will be assured; 
+4.	Integrity of information will be maintained; 
+5.	Business requirements for the availability of information and information systems will be met. 
+6.	Personnel security requirements will be met; 
+7.	Physical, logical, and environmental security (including communications security) will be maintained; 
+8.	Legal, regulatory, and contractual requirements will be met; 
+9.	Systems development and maintenance will be performed using a life cycle methodology; 
+10.	Business continuity plans will be produced, maintained, and tested; 
+11.	Information security awareness training will be provided to all staff;
+12.	All breaches of information systems security, actual or suspected, will be reported to, and promptly investigated by Information Security Officer; and 
+13.	Violations of Information Security Policy will result in penalties or sanctions. 
+To ensure that the above objectives are adequately covered, and protection to the Information Assets are commensurate to the likely harm from security failures, Risk Assessment would be conducted periodically for all IT Assets of the Department. This would be reviewed at intervals no later than once in three years. 
+
+5. Roles and Responsibilities: 
+
+1.	Policy Management: 
+This policy has been approved by the Comptroller and Auditor General of India. Formulation and maintenance of the policy is the responsibility of the Director/Dy. Director, (Information Systems) of the office of the CAG of India, who will also function as the Information Security Officer of the Department. 
+2.	Policy Implementation. 
+•	Each member of the Department will be responsible for meeting published IT Security standards. 
+•	The Safety and Security of each IT Asset would be the primary responsibility of the Head of the Office. 
+•	Each office would have one Group officer designated as the IT Security manager for ensuring compliance with the various Guidelines and policies enunciated by this document. 
+3.	Individuals. 
+•	All ordinary users of the IT resources are responsible for the proper care and use of IT resources under their direct control, and must comply with the provisions of the IT Policy 
+•	Individuals will be custodians of desktop systems under their control 
+
+6. Policy Documentation. 
+
+This policy is enunciated by the Security Handbook organized in four parts: 
+1.	Part­I: IT Security Policy 
+2.	Part­II: Domain Specific Security Instructions.
+3.	Part­III: Subsidiary Security Policies. This has to be read along with the Domain specific instructions given in Part­II.4. Part­IV: Guidelines and Methodologies. 
+Additional procedures and Guidelines would be issued from time to time to supplement the security handbook. 7. Changes 
+The IT Security Policy is a "living" document that will be altered as required to deal with changes in technology, applications, procedures, legal and social imperatives, perceived dangers, etc. The policy would be reviewed annually, and required changes made with the approval of the Comptroller and Auditor General of India. 
+
