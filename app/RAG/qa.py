@@ -2,6 +2,9 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from .prompt import SYSTEM_PROMPT
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def generate_answer(query: str, docs: list):
     """
