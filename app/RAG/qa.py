@@ -13,7 +13,7 @@ def generate_answer(query: str, docs: list):
     """
     # Initialize the LLM tool dynamically using setup configurations
     llm = ChatGroq(
-        model="qwen/qwen3-32b",
+        model="qwen/qwen3.6-27b",
         temperature=0  # Zero temperature forces deterministic, factual answers
     )
 
