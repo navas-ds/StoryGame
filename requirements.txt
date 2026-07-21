@@ -12,3 +12,5 @@ pypdf
 python-multipart
 python-dotenv
 langchain-groq
+langchain-huggingface
+langgraph
