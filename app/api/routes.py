@@ -3,12 +3,12 @@ from fastapi import APIRouter, UploadFile, File, HTTPException
 from pydantic import BaseModel
 
 # Safe, lowercase imports to guarantee seamless compilation under Linux Docker containers
-from app.rag.loader import load_document
-from app.rag.chunking import split_documents
-from app.rag.vectorstore import add_documents_to_store
+from rag.loader import load_document
+from rag.chunking import split_documents
+from rag.vectorstore import add_documents_to_store
 
-from app.agent.agent import get_agent_executor
-from app.memory.memory import get_session_history
+from agent.agent import get_agent_executor
+from memory.memory import get_session_history
 
 router = APIRouter()
 
@@ -60,51 +60,60 @@ def list_documents():
 
 @router.post("/chat")
 def chat(request: ChatRequest):
-    """Processes message requests through a multi-step agent tracking historical sessions."""
-    # Fetch active session storage interface
+    """Processes message requests through the latest official LangChain agent harness framework."""
+    # 1. Fetch local session memory history for tracking verification
     history = get_session_history(request.session_id)
-    
-    # Extract existing conversation history logs BEFORE appending the new message
-    # This prevents the agent from seeing the new prompt duplicated inside the context log
-    past_messages = history.messages.copy()
 
-    # Append current user prompt message context to historical storage
+    # 2. Store incoming query string locally
     history.add_user_message(request.message)
 
-    # Spawn fresh agent routing execution instance
-    executor = get_agent_executor()
+    # 3. Pull the active agent runtime harness
+    agent = get_agent_executor()
+    
+    # 4. Enforce conversation persistence by passing the session_id as the thread_id
+    config = {"configurable": {"thread_id": request.session_id}}
     
     try:
-        # Execute query passing BOTH current input text string AND historical memory sequences
-        result = executor.invoke({
-            "input": request.message,
-            "chat_history": past_messages
-        })
+        # 5. Invoke the agent passing standard message structures and configuration keys
+        result = agent.invoke(
+            {"messages": [{"role": "user", "content": request.message}]},
+            config=config
+        )
 
-        output_text = result.get("output", "")
+        # 6. Pull the final text statement out from the message stream array
+        output_messages = result.get("messages", [])
+        if not output_messages:
+            raise HTTPException(status_code=500, detail="Agent structure returned an empty execution path.")
+            
+        final_answer_text = output_messages[-1].content
         
-        # Save AI output context back to session history securely
-        history.add_ai_message(output_text)
+        # 7. Persist AI answer text back to local session history
+        history.add_ai_message(final_answer_text)
 
-        # FIXED: Serialize complex multi-step intermediate structures to basic strings to prevent FastAPI crashes
-        raw_steps = result.get("intermediate_steps", [])
+        # 8. Parse out the tool steps directly from the runtime state logs
         clean_reasoning_steps = []
-        
-        for action, observation in raw_steps:
-            clean_reasoning_steps.append({
-                "tool_activated": getattr(action, "tool", "Unknown Tool"),
-                "tool_input": getattr(action, "tool_input", ""),
-                "thought_log": getattr(action, "log", ""),
-                "tool_output_received": str(observation)
-            })
+        for msg in output_messages:
+            # Check for model objects containing a valid tool_calls attribute
+            if hasattr(msg, "tool_calls") and msg.tool_calls:
+                for tool_call in msg.tool_calls:
+                    clean_reasoning_steps.append({
+                        "tool_activated": tool_call.get("name", "Unknown Tool"),
+                        "tool_input": str(tool_call.get("args", "")),
+                        "thought_log": getattr(msg, "content", "") or "Evaluating tool execution logic.",
+                        "tool_output_received": "Awaiting response payload..."
+                    })
+            
+            # Map the corresponding tool result message to the last tracked tool activation step
+            elif msg.type == "tool" and clean_reasoning_steps:
+                clean_reasoning_steps[-1]["tool_output_received"] = str(msg.content)
 
         return {
-            "answer": output_text,
+            "answer": final_answer_text,
             "reasoning": clean_reasoning_steps
         }
         
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Agent execution timeout or error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Agent execution path failure: {str(e)}")
 
 
 @router.get("/chat/{session_id}/history")
