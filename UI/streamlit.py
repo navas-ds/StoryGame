@@ -21,6 +21,22 @@ if "messages" not in st.session_state:
 # 3. Sidebar UI: Document File Management
 with st.sidebar:
     st.title("📂 Document Center")
+
+    # Place this functional action button inside the sidebar block of streamlit_app.py
+    if st.button("➕ Start New Chat Session", use_container_width=True, help="Switches to a fresh chat session without deleting old ones."):
+        # Step A: Generate a brand new unique session token
+        st.session_state.session_id = str(uuid.uuid4())
+        
+        # Step B: Clear only the local frontend UI screen message display array
+        st.session_state.messages = []
+        
+        # Step C: Show a quick visual success alert
+        st.toast("Switched to a brand new chat session!", icon="🚀")
+        
+        # Step D: Force Streamlit to instantly re-render the pristine empty workspace layout
+        st.rerun()
+
+    st.divider()
     st.write("Upload knowledge manuals or reference guides to query your assistant.")
     
     # File Uploader Widget
@@ -130,3 +146,5 @@ if user_prompt := st.chat_input("Enter your question or analytical prompt here..
                     
             except Exception as e:
                 st.error(f"Failed to communicate with agent service: {str(e)}")
+
+
