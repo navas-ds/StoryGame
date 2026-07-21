@@ -1,4 +1,4 @@
-# Smart Document Assistant 🤖📄
+# Smart Document Assistant
 
 An advanced, enterprise-ready **Smart Document Assistant** combining a highly factual Retrieval-Augmented Generation (RAG) data pipeline with a multi-step ReAct Agent. Built entirely using modern **procedural functional programming standard** (completely free of object-oriented class overhead), this system uses a stateless FastAPI backend and an interactive Streamlit frontend. 
 
@@ -6,10 +6,11 @@ It satisfies all standard and bonus deliverables—including multi-step tool rou
 
 ---
 
-## 🏗️ System Architecture
+### 🏗️ System Architecture
 
+```text
 ┌────────────────────────────────────────────────────────┐
-│                 Streamlit User Interface (UI)           │
+│               Streamlit User Interface (UI)            │
 └───────────────────────────┬────────────────────────────┘
                             │ Sends user message + Session ID
                             ▼
@@ -30,6 +31,8 @@ It satisfies all standard and bonus deliverables—including multi-step tool rou
 │  Calculator    ││  Clock Tool  │   │     Chroma Vector Database   │
 │ (Secure Math)  ││ (System Time)│   │    (Stores Text Fragments)   │
 └────────────────┘└──────────────┘   └──────────────────────────────┘
+```
+
 
 
 ### 🧬 Core Components Split
