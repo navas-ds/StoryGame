@@ -10,9 +10,6 @@ def create_app() -> FastAPI:
     """
     # Initialize the main FastAPI backend app
     app = FastAPI(
-        title="Smart Document Assistant API",
-        description="A secure, multi-step RAG Agent API built with FastAPI and LangChain",
-        version="1.0.0"
     )
 
     # Configure CORS middleware so your Streamlit UI can talk to it seamlessly
@@ -24,7 +21,6 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Mount the functional endpoint router we updated in the previous step
     app.include_router(api_router, prefix="/api/v1")
 
 # Generate the app instance that Uvicorn or Docker will point to
