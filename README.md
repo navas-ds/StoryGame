@@ -87,7 +87,98 @@ Open two terminal windows side by side to launch the independent services:
 
 ---
 
+##  Testing
 
+Upload the sample documents
+
+### Query 1 — Direct Retrieval
+
+**Question**
+
+> What are the office working hours and how many annual leave days are provided?
+
+**Expected Behavior**
+
+The assistant retrieves information from the employee handbook and responds that:
+
+- Office hours are **9:00 AM to 6:00 PM (Monday–Friday)**.
+- Employees receive **20 annual leave days**.
+
+---
+
+### Query 2 — Multi-Step Reasoning (Document Search + Calculator)
+
+**Question**
+
+> If the annual learning budget is ₹25,000 and an employee uses 60% of it for cloud training, what is the remaining balance?
+
+**Expected Behavior**
+
+The assistant:
+
+1. Searches the documents to find the learning budget (₹25,000).
+2. Uses the calculator tool to evaluate:
+
+```text
+25000 - (0.60 × 25000)
+```
+
+3. Returns:
+
+```text
+₹10,000
+```
+
+---
+
+### Query 3 — Date & Document Search
+
+**Question**
+
+> What is today's date and time, and what is the deadline for submitting expense claims?
+
+**Expected Behavior**
+
+The assistant:
+
+- Uses the `datetime_tool` to retrieve the current system date and time.
+- Searches the uploaded documents.
+- Responds that expense claims must be submitted **within 15 days**.
+
+---
+
+### Query 4 — Conversation Memory
+
+**Question 1**
+
+> How many sick leave days do employees receive?
+
+**Follow-up Question**
+
+> What about casual leave?
+
+**Expected Behavior**
+
+The assistant remembers the previous conversation and correctly answers:
+
+- Sick Leave: **12 days**
+- Casual Leave: **8 days**
+
+without asking for clarification.
+
+---
+
+### Query 5 — Hallucination Prevention
+
+**Question**
+
+> What is the company's reimbursement policy for international space travel?
+
+**Expected Behavior**
+
+Since no such information exists in the uploaded documents, the assistant must respond exactly:
+
+> I don't know based on the provided documents.
 
 ## 🗂️ Project Repository Tree
 
