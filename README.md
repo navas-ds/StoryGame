@@ -75,13 +75,14 @@ Open two terminal windows side by side to launch the independent services:
 
 * **Terminal A (FastAPI Backend Server)**:
   ```bash
+  cd app
   python main.py
   ```
   *The API will boot up and bind to network port `http://localhost:8000`. You can inspect the fully interactive visual API testing workbench natively via `http://localhost:8000/docs`.*
 
 * **Terminal B (Streamlit Dashboard UI)**:
   ```bash
-  streamlit run ui/streamlit.py
+  streamlit run UI/streamlit.py
   ```
   *The user interface workspace will automatically launch a tab inside your default browser routing to `http://localhost:8501`.*
 
