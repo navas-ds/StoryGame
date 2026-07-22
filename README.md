@@ -60,7 +60,7 @@ Clone your repository, establish a dedicated Python virtual environment, and act
 
 git clone https://github.com/navas-ds/StoryGame.git
 
-create venv
+#### create venv with python 3.11
 ### 2. Install Project Dependencies
 Install all structural core packages using `pip`:
 
